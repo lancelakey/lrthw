@@ -2,11 +2,22 @@ Learn Ruby The Hard Way exercises
 
 http://ruby.learncodethehardway.org/
 
+
 YMMV:
 I didn't think about uploading this to github until around exercise 21.
 Before 21 I wasn't thinking much about file naming, specifically with regard to the extra credit changes, or commenting.
 
+
 Ruby Version:
+http://ruby.learncodethehardway.org/book/ex0.html
+"This tutorial assumes that you are using Ruby version 1.9.2."
+
 When I started this I noticed some of the exercises weren't behaving as expected.
-I was using an older ruby version.
+I was using an older ruby version, ruby 1.8.7
 I started using ruby 1.9.2-p290 and everything started behaving according to the exercises.
+
+
+rbenv:
+Speaking of ruby versions I'm using rbenv to manage ruby versions on OS X
+https://github.com/sstephenson/rbenv
+

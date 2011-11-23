@@ -41,17 +41,20 @@ puts
 # Finally, do the inverse. Write out a simple formula and use the functions in the same way to calculate it.
 #
 
+puts "Extra Credit:"
 new_formula = (((iq*100) / age) + weight) - height
 puts "This is the result of the new formula: #{new_formula}"
 puts
 
 new_formula_calculated_by_functions_1 = subtract(height, add(weight, divide(multiply(iq, 100), age)))
 puts "This is the result of the new formula calculated by functions 1: #{new_formula_calculated_by_functions_1}"
+puts "This is wrong."
 puts
 
 
 new_formula_calculated_by_functions_2 = subtract(add(weight, divide(multiply(iq, 100), age)), height)
 puts "This is the result of the new formula calculated by functions 2: #{new_formula_calculated_by_functions_2}"
+puts "This is right"
 puts
 
 # This was tricky indeed!
