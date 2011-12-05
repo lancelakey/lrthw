@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # This one's interesting
-# Each puts statement format string [ ] requires 4 arguments or it won't work
+# Each puts statement format string [ ] requires 4 arguments or it won't work, you'll get a "too few arguments error"
 #
 
 formatter = "%s %s %s %s"
