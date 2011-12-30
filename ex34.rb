@@ -30,3 +30,221 @@ puts animals.first
 puts animals.last
 
 
+#~ > irb
+#>> 
+#?> 
+#?> 
+#?> dogs = ['beagle', 'dauschund', 'great dane']
+#=> ["beagle", "dauschund", "great dane"]
+#>> dogs
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> dogs.length
+#=> 3
+#>> 
+#?> 
+#?> 
+#?> dogs[0]
+#=> "beagle"
+#>> 
+#?> 
+#?> 
+#?> 
+#?> dogs[0].class
+#=> String
+#>> 
+#?> 
+#?> 
+#?> dogs[0].swapcase
+#=> "BEAGLE"
+#>> 
+#?> 
+#?> 
+#?> 
+#?> dogs.swapcase
+#NoMethodError: undefined method `swapcase' for ["beagle", "dauschund", "great dane"]:Array
+#  from (irb):28
+#>> dogs[-1]
+#=> "great dane"
+#>> 
+#?> 
+#?> 
+#?> dogs.each { |i
+#>> 
+#
+#^C
+#>> 
+#?> 
+#?> dogs.each { |dog| puts dog }
+#beagle
+#dauschund
+#great dane
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> dogs.each { |dog| puts dog }.swapcase
+#beagle
+#dauschund
+#great dane
+#NoMethodError: undefined method `swapcase' for ["beagle", "dauschund", "great dane"]:Array
+#  from (irb):41
+#>> 
+#?> 
+#?> dogs.each { |dog| puts dog.swapcase }
+#BEAGLE
+#DAUSCHUND
+#GREAT DANE
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> dogs.each { |dog| puts dog.reverse.swapcase }
+#ELGAEB
+#DNUHCSUAD
+#ENAD TAERG
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> dogs
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> dogs.each { |dog| puts dog.class }
+#String
+#String
+#String
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> dogs.each { |dog| puts dog.class; puts dog }
+#String
+#beagle
+#String
+#dauschund
+#String
+#great dane
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> dogs.each { |dog| put dog.class; put dog }
+#NoMethodError: undefined method `put' for main:Object
+#  from (irb):70
+#  from (irb):70:in `each'
+#  from (irb):70
+#>> dogs.each { |dog| put dog.class; puts dog }
+#NoMethodError: undefined method `put' for main:Object
+#  from (irb):71
+#  from (irb):71:in `each'
+#  from (irb):71
+#>> 
+#?> 
+#?> 
+#?> dogs.each { |dog| print dog.class; put dog }
+#StringNoMethodError: undefined method `put' for main:Object
+#  from (irb):75
+#  from (irb):75:in `each'
+#  from (irb):75
+#>> 
+#?> 
+#?> 
+#?> dogs.each { |dog| print dog.class; puts dog }
+#Stringbeagle
+#Stringdauschund
+#Stringgreat dane
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> dogs.each { |dog| print dog.class; print " " puts dog }
+#SyntaxError: compile error
+#(irb):83: syntax error, unexpected tIDENTIFIER, expecting '}'
+#dogs.each { |dog| print dog.class; print " " puts dog }
+#                                                 ^
+#  from (irb):83
+#>> dogs.each { |dog| print dog.class; print " "; puts dog }
+#String beagle
+#String dauschund
+#String great dane
+#=> ["beagle", "dauschund", "great dane"]
+#>> dogs.each { |dog| print dog.class; print " "; puts dog }
+#String beagle
+#String dauschund
+#String great dane
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> dogs.each { |dog| print dog.class; print " "; puts dog.reverse.swapcase }
+#String ELGAEB
+#String DNUHCSUAD
+#String ENAD TAERG
+#=> ["beagle", "dauschund", "great dane"]
+#>> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> dogs.first
+#=> "beagle"
+#>> dogs.first.class
+#=> String
+#>> 
+#?> 
+#?> 
+#?> dogs.first.reverse
+#=> "elgaeb"
+#>> 
+#?> 
+#?> 
+#?> dogs.first.class.reverse
+#NoMethodError: undefined method `reverse' for String:Class
+#  from (irb):110
+#>> 
+#?> 
+#?> 
+#?> dogs.first.reverse.swapcase
+#=> "ELGAEB"
+#>> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> 
+#?> dogs[0]
+#=> "beagle"
+#>> 
+#?> 
+#?> 
+#?> 
+#?> puts dogs
+#beagle
+#dauschund
+#great dane
+#=> nil
+#>> puts dogs[0]
+#beagle
+#=> nil
+#>> 
