@@ -1,0 +1,22 @@
+# Exercise 36: Designing and Debugging
+
+Rules for if-statements:
+
+1. Every if-statement must have an else
+
+2. If this else would never be run, then you must use a die function in the else that prints out an error message and dies.
+
+3. Never nest if-statements more than 2 deep and try to keep them only 1 deep. If you put an if inside an if then you should be looking to move the 2nd if into a function.
+
+4. Treat if-statements like paragraphs, where each if elsif if grouping is like a paragraph with spaces before and after to visually separate it from other code
+
+5. Keep boolean tests simple. If they're complex, move their calculations to variables earlier in your function and use a good name for the variables
+
+
+Rules for loops:
+
+1. Use a while-loop only to loop forever, and that means probably never. This only applies to Ruby. Other languages are different.
+
+2. Use a for-loop for all other kinds of looping, especially if there is a fixed or limited number of things to loop over.
+
+
