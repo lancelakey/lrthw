@@ -40,3 +40,18 @@ while true
   # This line is the most important ever. Study it!
   puts cities[:find].call(cities,state)
 end
+
+
+# Extra Credit:
+#
+# a.include? or a.has_key? only tests for Keys, not Values
+#
+# you can't return a hash key or value like this a[0]
+#
+# you have to be specific if you're looking for a key or value with .has_key?() or .has_value?()
+#
+# i can use a for loop for i in a puts i end to put out what's in the array but it puts out the key, value in an array
+# it seems easier and more flexible to use a.each_key or a.each_value or just a.each which returns both key and value
+#
+# 
+#

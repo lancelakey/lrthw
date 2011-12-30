@@ -1,43 +1,39 @@
 #!/usr/bin/env ruby
 
 # Create hash "cities"
-# Add cities to the hash
+# Add keys and values of states and cities to the hash "cities"
 cities = {'CA' => 'San Francisco',
   'MI' => 'Detroit',
   'FL' => 'Jacksonville'
   }
 
-# Add more cities to the hash
+# Add more to the hash
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
-puts "We've added some states and cities to a hash called \"cities\""
-puts "Cities: #{cities}"
-
 # Create a method on ruby called "find_city"
-def find_city(map, state)
-  #puts "Map: #{map}, State: #{state}"
-  if map.has_key? state
-    return map[state]
+def find_city(cities, state)
+  if cities.has_key? state
+    return cities[state]
   else
     return "Not found."
   end
 end
 
-# Ok now. Pay attention!
+# There's a method on ruby called "find_city"
+# I'm asking ruby to give me "find_city" as a methodobject
+# I'm taking that methodobject and storing it as a value in a hash called "cities" using the symbol :find as the key
 cities[:find] = method(:find_city)
 
-puts
-puts "We just added some weird shit to cities"
-puts "I believe we just added a method to cities"
-puts "Cities: #{cities}"
 
+# True is always true
+# This while loop will run forever unless we break out of it
 while true
   print "State? (ENTER to quit)"
   state = gets.chomp
 
   break if state.empty?
 
-  # This line is the most important ever. Study it!
-  puts cities[:find].call(cities,state)
+  print "Capital: "
+  puts cities[:find].call(cities, state)
 end
