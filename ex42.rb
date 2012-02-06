@@ -24,6 +24,7 @@ class Game
     while true
       puts "\n----------"
       room = method(next_room)
+      next_room = room.call()
     end
   end
 
@@ -146,7 +147,7 @@ class Game
       return :escape_pod
     else
       puts "DOES NOT COMPUTE!"
-      return :the bridge
+      return :the_bridge
     end
   end
 
