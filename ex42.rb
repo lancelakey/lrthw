@@ -2,6 +2,10 @@
 
 class Game
 
+  # Whenever Ruby creates a new object, it looks for a method named initialize and executes it. 
+  # Arguments supplied to .new() are delivered to initialize()
+  # In this script the argument :central_corridor is supplied to initialize(start)
+  # a_game = Game.new(:central_corridor)
   def initialize(start)
     @quips = [
       "you died. You kinda suck at this.",
@@ -11,6 +15,10 @@ class Game
     ]
     @start = start
     puts "in init @start = " + @start.inspect
+    # Here we are calling the method inspect on @start which is a symbol
+    # @start has been assigned the symbol :central_corridor
+    # @start.inspect returns :central_corridor
+    # The method inspect returns a string containing a human-readable representaiton of the object it is being called upon
   end
 
   def prompt()
@@ -24,6 +32,9 @@ class Game
     while true
       puts "\n----------"
       room = method(next_room)
+      puts "PUTS ROOM INSPECT AND CLASS"
+      puts room.inspect
+      puts room.class
       next_room = room.call()
     end
   end
@@ -182,6 +193,12 @@ class Game
   end
 end
 
+# Create a new instance of the Class "Game"
+# Supply the initialize method with the argument :central_corridor
+# Assign this to the object a_game
 a_game = Game.new(:central_corridor)
+
+# Call the method play on the object a_game
+# The method play 
 a_game.play()
 
